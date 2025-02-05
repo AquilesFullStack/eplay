@@ -5,8 +5,8 @@ export type Props = {
   title: string
   to?: string
   onClick?: () => void
-  children: string
-  variant: 'primary' | 'secondary'
+  children?: string
+  variant?: 'primary' | 'secondary'
 }
 
 const Button = ({

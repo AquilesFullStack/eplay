@@ -16,7 +16,8 @@ const Hero = ({ game }: Props) => {
   const dispatch = useDispatch()
 
   const addToCart = () => {
-    dispatch(add(game)), dispatch(open())
+    dispatch(add(game))
+    dispatch(open())
   }
 
   return (
