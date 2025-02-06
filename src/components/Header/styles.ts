@@ -89,6 +89,7 @@ export const Hamburguer = styled.div`
     width: 100%;
     background-color: ${cores.branca};
     margin-bottom: 4px;
+    cursor: pointer;
   }
 
   @media (min-width: ${breakpoints.tablet}) {

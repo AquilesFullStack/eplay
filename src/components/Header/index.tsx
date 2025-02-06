@@ -1,4 +1,14 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { HashLink } from 'react-router-hash-link'
+
+import { open } from '../../store/reducers/cart'
+
+import logo from '../../assets/images/logo.svg'
+import carrinho from '../../assets/images/carrinho.svg'
+
 import {
   HeaderBar,
   Links,
@@ -8,14 +18,6 @@ import {
   HeaderRow,
   NavMobile
 } from './styles'
-
-import logo from '../../assets/images/logo.svg'
-import carrinho from '../../assets/images/carrinho.svg'
-
-import { open } from '../../store/reducers/cart'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootReducer } from '../../store'
-import { useState } from 'react'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -41,13 +43,13 @@ const Header = () => {
           <nav>
             <Links>
               <LinkItem>
-                <Link to="/categories">Categorias</Link>
+                <Link title="Clique aqui para acessar a página de Categorias" to="/categories">Categorias</Link>
               </LinkItem>
               <LinkItem>
-                <a href="#">Novidades</a>
+                <HashLink title="Clique aqui para acessar a página de Novidades" to="/#coming-soon">Novidades</HashLink>
               </LinkItem>
               <LinkItem>
-                <a href="#">Promoções</a>
+                <HashLink title="Clique aqui para acessar a página de Promoções" to="/#on-sale">Promoções</HashLink>
               </LinkItem>
             </Links>
           </nav>
@@ -61,13 +63,13 @@ const Header = () => {
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>
         <Links>
           <LinkItem>
-            <Link to="/categories">Categorias</Link>
+            <Link title="Clique aqui para acessar a página de Categorias" to="/categories">Categorias</Link>
           </LinkItem>
           <LinkItem>
-            <a href="#">Novidades</a>
+            <HashLink title="Clique aqui para acessar a página de Novidades" to="/#coming-soon">Novidades</HashLink>
           </LinkItem>
           <LinkItem>
-            <a href="#">Promoções</a>
+            <HashLink title="Clique aqui para acessar a página de Promoções" to="/#on-sale">Promoções</HashLink>
           </LinkItem>
         </Links>
       </NavMobile>

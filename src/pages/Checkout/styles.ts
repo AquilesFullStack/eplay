@@ -9,7 +9,7 @@ type RowProps = {
   marginTop?: string
 }
 
-type TabButtoProps = {
+type TabButtonProps = {
   isActive: boolean
 }
 export const Row = styled.div<RowProps>`
@@ -41,7 +41,7 @@ export const InputGroup = styled.div<InputGroupProps>`
   }
 `
 
-export const TabButton = styled.button<TabButtoProps>`
+export const TabButton = styled.button<TabButtonProps>`
   border-radius: 8px;
   font-size: 14px;
   font-weight: bold;
